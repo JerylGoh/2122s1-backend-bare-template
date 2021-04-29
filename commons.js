@@ -1,5 +1,11 @@
+//database layer
+
+
+//we are still referencing data from the environment, with dotenv, you can load the 
+//values inside the .env file into the environment
 require('dotenv').config();
 
+//load the values inside the .env file into the environment
 module.exports.DB_CONFIG = {
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,

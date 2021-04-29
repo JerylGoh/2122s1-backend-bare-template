@@ -1,6 +1,10 @@
+//model layer
+
 const dbManager = require('./db_manager');
 
 //enqueue
+//chain promised continued from db_manager.js, a json object { customer_id: customerId }
+//is returned to the user
 module.exports.enqueue = function () {
     return dbManager.enqueue().then((customerId) => ({ customer_id: customerId }));
 };

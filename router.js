@@ -1,3 +1,5 @@
+//controller layer
+
 const { app } = require('./app');
 
 const queueRoute = require('./routes/queue_route');
@@ -23,9 +25,11 @@ app.get('/', function (req, res, next) {
     });
 });
 
+//insert the endpoints from queue_route,.js here
 app.use('/queue', queueRoute);
 
-// 404
+//if error occurs in previous mf, the .catch in the previous mf runs next() which executes this error handling mf
+
 app.use((req, res, next) => next(new errors.UrlNotFoundError(`${req.method} ${req.originalUrl} Not Found`)));
 
 // error handler

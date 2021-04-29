@@ -1,14 +1,10 @@
-const { getPool } = require('../database/database');
+//model layer
 
+const { getPool } = require('../database/database');
 const pool = getPool();
 
-//test connection to database using js
-pool.query('select * from queue_tab;')
-    .then(function (result) {
-        console.log(result.rows);
-    })
-    .catch(console.error);
-
+//thie method would be continued inside queue_manager.js via a .then method
+//chain promising occurs in queue_manager.js
 module.exports.enqueue = function () {
     return pool
         .query(
@@ -18,7 +14,7 @@ module.exports.enqueue = function () {
         )
         .then((result) => result.rows[0].id);
 };
-
+//returns the result of the sql query
 module.exports.dequeue = function () {
     return pool
         .query(

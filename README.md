@@ -262,7 +262,7 @@
     const pool = getPool();
     ```
 
-22. We want to try enqueueing a few entities and check the number of rows in the database afterwards, (i.e. calling enqueueing 3 times should later show that there are 3 rows.)
+22. We want to try enqueueing a few entities and check the number of rows in the database afterwards, (id.est. calling enqueueing 3 times should later show that there are 3 rows.)
 
     > You may enter `.editor` to enter editor mode which you can copy and paste the following lines
 
