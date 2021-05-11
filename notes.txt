@@ -62,11 +62,11 @@ the table to be created with the attributes
 
 commands:
 
-docker-compose up:
+docker-compose up || npm run start-db
 to start the database or to create the database and tables if they 
 have yet to be created
 
-node ./www: 
+node ./www || npm start:
 to start the backend server ready to receive request from the client
 
 notes:
@@ -78,3 +78,41 @@ www.js
 
 database:
 docker stores the init.sql file in one of the docker's container's directories, database is created when docker image runs the init.sql file
+
+
+testing:
+
+Unit Testing:
+In Software Development Life Cycle, normally software application does not developed by a single developer. 
+The software application is divided into different modules and modules are allocated to different development 
+teams. When a module is developed by developer and it is tested for functionality then it is known as Unit testing.
+
+Integration Testing:
+Once all modules are developed and integrated with other modules then Integration testing is to be carried out to 
+discover the issues arise when different modules are interacting with each other to build overall system.
+
+Boundary Value Analysis:
+Boundary testing is the process of testing between extreme ends or boundaries between partitions of the input values.
+
+So these extreme ends like Start- End, Lower- Upper, Maximum-Minimum, Just Inside-Just Outside values are called boundary 
+values and the testing is called "boundary testing". The basic idea in normal boundary value testing is to select input 
+variable values at their:
+
+Minimum
+Just above the minimum
+A nominal value
+Just below the maximum
+Maximum
+
+In Boundary Testing, Equivalence Class Partitioning plays a good role
+Boundary Testing comes after the Equivalence Class Partitioning.
+
+Equivalence Partition:
+Equivalence Partitioning or Equivalence Class Partitioning is type of black box testing technique which can be applied to 
+all levels of software testing like unit, integration, system, etc. In this technique, input data units are divided into 
+equivalent partitions that can be used to derive test cases which reduces time required for testing because of small number of test cases.
+
+Conclusion:
+BVA is better than EP and comes after EP. This is while EP only considers any value between a single partition(if that value succeeds, it is
+deemed successful), BVA considers the min, just above min, normal, just below max and max values of a single partition.
+
